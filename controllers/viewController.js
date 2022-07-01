@@ -3,17 +3,9 @@ const home = (req, res) => {
   res.render("homepage", { user });
 };
 const register = (req, res) => {
-  const token = req.cookies.userToken;
-  if (token) {
-    return res.redirect("/");
-  }
   res.render("register");
 };
 const login = (req, res) => {
-  const token = req.cookies.userToken;
-  if (token) {
-    return res.redirect("/");
-  }
   res.render("login");
 };
 
