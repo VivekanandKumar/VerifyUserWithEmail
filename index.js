@@ -16,9 +16,10 @@ app.use(viewRoutes);
 app.use(userRoutes);
 
 // server configuration
-app.listen(2001, (err) => {
+const PORT = process.env.PORT || 2001;
+app.listen(PORT, (err) => {
   if (err) {
     throw err;
   }
-  console.log("Server listen on port 2001");
+  console.log(`Server listen on port ${PORT}`);
 });
