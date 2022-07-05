@@ -1,0 +1,24 @@
+</body>
+<script>
+    const eye = document.querySelector('#show-pass');
+    const passField = document.querySelector('.pass');
+    eye.addEventListener('click', () => {
+        const isHide = passField.classList.contains('isHide')
+        if (isHide) {
+            show();
+            passField.classList.toggle('isHide');
+        } else {
+            hide();
+            passField.classList.toggle('isHide');
+        }
+    })
+
+    const show = () => {
+        passField.setAttribute('type', 'text')
+    }
+    const hide = () => {
+        passField.setAttribute('type', 'password')
+    }
+</script>
+
+</html>

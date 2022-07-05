@@ -11,11 +11,13 @@
         <form method="POST">
             <h2>Login</h2>
             <input type="email" placeholder="Email" name="email">
-            <input type="password" placeholder="Password" name="password">
+            <div class="pass-eye">
+                <input class="pass isHide" type="password" placeholder="Password" name="password">
+                <img id="show-pass" src="/images/open-eye.png" alt="">
+            </div>
+
             <button type="submit">Login</button>
             <p>Dont't have an account?<a href="/register">Create an account.</a></p>
         </form>
     </div>
-</body>
-
-</html>
+    <%- include('partials/footer') %>

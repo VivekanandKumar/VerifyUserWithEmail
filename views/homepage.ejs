@@ -9,12 +9,17 @@
 <body>
     <div class="container">
         <div class="inner">
-            <h2>Hello, <%= user.name %>
-            </h2>
-            <a href="/logout">Logout</a>
-            <a style="margin-top: 20px" href="/changePassword">Change Password</a>
+            <div class="data">
+                <h2>Hello, <%= user.name %>
+                </h2>
+                <h4>Your Email is <%= user.email %>
+                </h4>
+            </div>
+            <div class="links" style="display:flex; justify-content:space-between">
+                <a href="/changePassword">Change Password</a>
+                <a href="/logout">Logout</a>
+            </div>
+
         </div>
     </div>
-</body>
-
-</html>
+    <%- include('partials/footer') %>
